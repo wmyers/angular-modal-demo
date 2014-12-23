@@ -3,18 +3,20 @@
 	<head>
 		<meta charset="utf-8">
 		<title>AngularJS Modal Demo</title>
-		<link rel="stylesheet" href="bower_components/todomvc-common/base.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="comps/modal/modal.css">
 	</head>
 	<body ng-app="modalDemo">
 
-		<h2>Modal Demo</h2>
+		<h3>Modal Demo</h3>
 
 		<!-- Modal demo UI -->
-		<div ng-controller="modalDemoCtrl">
+		<div ng-controller="modalDemoCtrl" class="ui-container">
 			<div class="dash-button" ng-click="launchModal('emailIntercept', 1)">Launch Modal 1</div>
-			<div class="clearfix"></div>
-			<br>
+			<div class="clearfix"></div><br>
 			<div class="dash-button" ng-click="launchModal('wipeHardDrive', 2, true)">Launch Modal 2</div>
+			<div class="clearfix"></div><br>
 			<p ng-show='modalOKConfig !== null'> Received OK from modal with contentId: {{modalOKConfig.contentId}} and targetId: {{modalOKConfig.targetId}}</p>
 		</div>
 
@@ -29,6 +31,9 @@
 		</modal>
 
 		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/lodash/dist/lodash.compat.js"></script>
 		<script src="js/app.js"></script>
+		<script src="comps/modal/modal.directive.js"></script>
+		<script src="comps/modal/modal.service.js"></script>
 	</body>
 </html>

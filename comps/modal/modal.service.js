@@ -12,7 +12,7 @@ angular.module('modalComp')
     var resetModal = function(){
       self.shown = false;
       self.config = null;
-      self.cancellable = true;
+      self.cancellable = false;
     };
 
     var self = {

@@ -54,6 +54,7 @@ angular.module('modalDemo', ['modalComp'])
                               ModalService
                             ) {
 
+            //config attached to modal OK button click events
             $scope.modalOKConfig = null;
 
             $scope.launchModal = function(contentId, targetId, cancellable){
@@ -63,10 +64,12 @@ angular.module('modalDemo', ['modalComp'])
               var config = { contentId:contentId, targetId:targetId, cancellable:cancellable };
               ModalService.show(config);
             };
-            //listen for all modal OK clicks
+
+            //listen for all modal OK click events, broadcast from the $rootScope downwards
             $scope.$on(
               'modalOKClickEvent',
               function(event, config){
+                //bind the OK click event confog
                 $scope.modalOKConfig = config;
               });
 
