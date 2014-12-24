@@ -69,7 +69,7 @@ angular.module('modalDemo', ['modalComp'])
             $scope.$on(
               'modalOKClickEvent',
               function(event, config){
-                //bind the OK click event confog
+                //bind the OK click event config
                 $scope.modalOKConfig = config;
               });
 

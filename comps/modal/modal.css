@@ -13,7 +13,7 @@
   /* A centered div above the overlay with a box shadow. */
   z-index:10000;
   position: absolute;
-  width: 50%; /* Default */
+  width: 25%; /* Default */
 
   /* Center the dialog */
   top: 50%;
@@ -42,7 +42,7 @@
 }
 .modal-buttons{
   padding: 5px 10px;
-  background: blue;
+  background: cadetblue;
   text-align: center;
   width: 100%;
 }

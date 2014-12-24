@@ -3,5 +3,6 @@ public
 .tmp
 .sass-cache
 .idea
+.jshintrc
 bower_components
 .DS_Store

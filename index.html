@@ -7,9 +7,9 @@
 		<link rel="stylesheet" href="css/demo-base.css">
 		<link rel="stylesheet" href="comps/modal/modal.css">
 	</head>
-	<body ng-app="modalDemo">
+	<body ng-app="modalDemo" ng-cloak>
 
-		<h3>Modal Demo</h3>
+		<h3>Angular Modal Demo</h3>
 
 		<!-- Modal demo UI -->
 		<div ng-controller="modalDemoCtrl" class="demo-ui-container">
@@ -17,7 +17,7 @@
 			<div class="clearfix"></div><br>
 			<div class="dash-button" ng-click="launchModal('wipeHardDrive', 2, true)">Launch Modal 2</div>
 			<div class="clearfix"></div><br>
-			<p ng-show='modalOKConfig !== null'> Received OK from modal with contentId: {{modalOKConfig.contentId}} and targetId: {{modalOKConfig.targetId}}</p>
+			<p ng-show='modalOKConfig !== null'> Received OK from modal with contentId: <span>{{modalOKConfig.contentId}}</span> and targetId: <span>{{modalOKConfig.targetId}}</span></p>
 		</div>
 
 		<!-- Concrete modal directive -->
